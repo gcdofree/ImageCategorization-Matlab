@@ -40,7 +40,7 @@ fea_dir = 'features/Caltech101';    % directory for saving final image features
 % -------------------------------------------------------------------------
 % extract SIFT descriptors, we use Prof. Lazebnik's matlab codes in this package
 % change the parameters for SIFT extraction inside function 'extr_sift'
-% extr_sift(img_dir, data_dir);
+extr_sift(img_dir, data_dir);
 
 % -------------------------------------------------------------------------
 % retrieve the directory of the database and load the codebook
@@ -63,7 +63,7 @@ dFea = sum(nCodebook*pyramid.^2);
 nFea = length(database.path);
 
 % extract LLC features
-% extr_LLC(nFea, database, fea_dir, B, pyramid, knn);
+extr_LLC(nFea, database, fea_dir, B, pyramid, knn);
 
 % retrieve LLC features
 fdatabase = retr_fdatabase_dir(fea_dir);
